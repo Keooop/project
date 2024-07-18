@@ -2,10 +2,10 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Контакты");
 ?><p>
-	Обратитесь к нашим специалистам и получите профессиональную консультацию по вопросам создания и покупки мебели (от дизайна, разработки технического задания до доставки мебели к Вам домой).
+	 Обратитесь к нашим специалистам и получите профессиональную консультацию по вопросам создания и покупки мебели (от дизайна, разработки технического задания до доставки мебели к Вам домой).
 </p>
 <p>
-	Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе. Будем рады помочь вам и ответить на все ваши вопросы.
+	 Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе. Будем рады помочь вам и ответить на все ваши вопросы.
 </p>
 <h2>Телефоны</h2>
 <ul>
@@ -29,7 +29,7 @@ $APPLICATION->SetTitle("Контакты");
 </ul>
 <h2>Офис в Москве</h2>
 <p>
-	<?$APPLICATION->IncludeComponent(
+	 <?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view",
 	".default",
 	Array(
@@ -43,4 +43,24 @@ $APPLICATION->SetTitle("Контакты");
 		"OPTIONS" => array(0=>"ENABLE_SCROLL_ZOOM",1=>"ENABLE_DBLCLICK_ZOOM",2=>"ENABLE_DRAGGING",)
 	)
 );?>
+</p>
+<p>
+ <br>
+</p>
+<p>
+ <br>
+</p>
+<p>
+ <br>
+</p>
+<p>
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "page",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => ""
+	)
+);?><br>
 </p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

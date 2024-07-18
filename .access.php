@@ -1,4 +1,5 @@
 <?
+$PERM["/"]["*"]="R";
 $PERM["urlrewrite.php"]["2"]="R";
 $PERM["urlrewrite.php"]["8"]="R";
 $PERM["urlrewrite.php"]["7"]="R";
@@ -141,5 +142,4 @@ $PERM[".git"]["7"]="R";
 $PERM[".git"]["6"]="R";
 $PERM[".section.php"]["8"]="D";
 $PERM[".section.php"]["*"]="D";
-$PERM["/"]["*"]="R";
 ?>

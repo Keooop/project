@@ -1,8 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Личный кабинет покупатель", 
-		"/lichnyy-kabinet/lichnyy-kabinet-prodavets/lichnyy-kabinet-pokupatel/", 
+		"Мои объявления", 
+		"/obyavleniya/index.php", 
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,7))" 
