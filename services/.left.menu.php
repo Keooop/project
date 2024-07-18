@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Агенты", 
-		"/services/agenty/", 
+		"/services/agenty.php", 
 		Array(), 
 		Array(), 
 		"" 

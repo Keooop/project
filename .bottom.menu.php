@@ -27,6 +27,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Личный кабинет", 
+		"/lichnyy-kabinet/index.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

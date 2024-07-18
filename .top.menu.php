@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		"/company/index.php", 
+		"/index.php", 
 		Array(), 
 		Array(), 
 		"" 
@@ -16,17 +16,24 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Объявления", 
-		"/company/obyavleniya/index.php", 
+		"/obyavleniya/index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Личный кабинет", 
-		"/login/index.php", 
+		"/lichnyy-kabinet/index.php", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6,7))" 
+		"CSite::InGroup(array(1,6))" 
+	),
+	Array(
+		"Личный кабинет", 
+		"/lichnyy-kabinet2/index.php", 
+		Array(), 
+		Array(), 
+		"CSite::InGroup(array(1,7))" 
 	)
 );
 ?>
