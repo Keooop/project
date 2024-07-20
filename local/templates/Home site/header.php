@@ -11,7 +11,7 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  
  <?php 
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
@@ -24,6 +24,7 @@
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/mediaelementplayer.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/animate.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/flaticon/font/flaticon.css');
+  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/icomoon/style.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/fl-bigmug-line.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/aos.css');
   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
@@ -50,81 +51,120 @@
 
 <body>
 <? $APPLICATION->ShowPanel();?>
-  <div class="site-loader"></div>
+    <div class="site-loader"></div>
 
-  <div class="site-wrap">
+<div class="site-wrap">
 
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
       </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-
-    <div class="border-bottom bg-white top-bar">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6 col-md-6">
-            <p class="mb-0">
-              <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
-                  class="d-none d-md-inline-block ml-2">+2 102 3923 3922</span></a>
-              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
-                  class="d-none d-md-inline-block ml-2">info@domain.com</span></a>
-            </p>
-          </div>
-          <div class="col-6 col-md-6 text-right">
-            <a href="#" class="mr-3"><span class="text-black icon-facebook"></span></a>
-            <a href="#" class="mr-3"><span class="text-black icon-twitter"></span></a>
-            <a href="#" class="mr-0"><span class="text-black icon-linkedin"></span></a>
-          </div>
-        </div>
-      </div>
-
     </div>
-    <div class="site-navbar">
-      <div class="container py-1">
-        <div class="row align-items-center">
-          <div class="col-8 col-md-8 col-lg-4">
-            <h1 class=""><a href="index2.php" class="h5 text-uppercase text-black"><strong>HomeSpace<span
-                    class="text-danger">.</span></strong></a></h1>
-          </div>
-          <div class="col-4 col-md-4 col-lg-8">
-            <nav class="site-navigation text-right text-md-right" role="navigation">
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
 
-              <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                  class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active">
-                  <a href="index2.php">Home</a>
-                </li>
-                <li class="has-children">
-                  <a href="index2.php">Properties</a>
-                  <ul class="dropdown">
-                    <li><a href="index2.php">Buy</a></li>
-                    <li><a href=index2.php">Rent</a></li>
-                    <li><a href="index2.php">Lease</a></li>
-                    <li class="has-children">
-                      <a href="index2.php">Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="index2.php">Menu One</a></li>
-                        <li><a href="index2.php">Menu Two</a></li>
-                        <li><a href="index2.php">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="index2.php">Blog</a></li>
-                <li><a href="index2.php">About</a></li>
-                <li><a href="index2.php">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-
-
+  <div class="border-bottom bg-white top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6 col-md-6">
+          <p class="mb-0">
+            <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
+                class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "local/templates/Home site/include/tel.php"
+	)
+);?></span></a>
+            <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
+                class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "local/templates/Home site/include/mail.php"
+	)
+);?></span></a>
+          </p>
         </div>
+        <div class="col-6 col-md-6 text-right">
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "local/templates/Home site/include/icon.php"
+	)
+);?>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="site-navbar">
+    <div class="container py-1">
+      <div class="row align-items-center">
+        <div class="col-8 col-md-8 col-lg-4">
+          <h1 class=""><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "local/templates/Home site/include/HomeSpace.php"
+	)
+);?><br></h1>
+        </div>
+        <div class="col-4 col-md-4 col-lg-8">
+          <nav class="site-navigation text-right text-md-right" role="navigation">
+
+            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+            <ul class="site-menu js-clone-nav d-none d-lg-block">
+              <li class="active">
+              <?$APPLICATION->IncludeComponent(
+	"bitrix:menu",
+	"",
+Array(),
+false
+);?>
+<a href="index.html">Home</a>
+              </li>
+              <li class="has-children">
+                <a href="properties.html">Properties</a>
+                <ul class="dropdown">
+                  <li><a href="#">Buy</a></li>
+                  <li><a href="#">Rent</a></li>
+                  <li><a href="#">Lease</a></li>
+                  <li class="has-children">
+                    <a href="#">Menu</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Menu One</a></li>
+                      <li><a href="#">Menu Two</a></li>
+                      <li><a href="#">Menu Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+
       </div>
     </div>
   </div>
+</div>
