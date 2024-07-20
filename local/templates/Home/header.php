@@ -87,7 +87,7 @@
       <div class="container py-1">
         <div class="row align-items-center">
           <div class="col-8 col-md-8 col-lg-4">
-            <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span
+            <h1 class=""><a href="index2.php" class="h5 text-uppercase text-black"><strong>HomeSpace<span
                     class="text-danger">.</span></strong></a></h1>
           </div>
           <div class="col-4 col-md-4 col-lg-8">
@@ -98,27 +98,27 @@
 
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active">
-                  <a href="index.html">Home</a>
+                  <a href="index2.php">Home</a>
                 </li>
                 <li class="has-children">
-                  <a href="properties.html">Properties</a>
+                  <a href="index2.php">Properties</a>
                   <ul class="dropdown">
-                    <li><a href="#">Buy</a></li>
-                    <li><a href="#">Rent</a></li>
-                    <li><a href="#">Lease</a></li>
+                    <li><a href="index2.php">Buy</a></li>
+                    <li><a href=index2.php">Rent</a></li>
+                    <li><a href="index2.php">Lease</a></li>
                     <li class="has-children">
-                      <a href="#">Menu</a>
+                      <a href="index2.php">Menu</a>
                       <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
+                        <li><a href="index2.php">Menu One</a></li>
+                        <li><a href="index2.php">Menu Two</a></li>
+                        <li><a href="index2.php">Menu Three</a></li>
                       </ul>
                     </li>
                   </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index2.php">Blog</a></li>
+                <li><a href="index2.php">About</a></li>
+                <li><a href="index2.php">Contact</a></li>
               </ul>
             </nav>
           </div>
