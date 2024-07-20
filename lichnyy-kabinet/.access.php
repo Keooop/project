@@ -1,4 +1,12 @@
 <?
+$PERM["lichnyy-kabinet-prodavets"]["2"]="D";
+$PERM["lichnyy-kabinet-prodavets"]["8"]="D";
+$PERM["lichnyy-kabinet-prodavets"]["7"]="D";
+$PERM["lichnyy-kabinet-prodavets"]["6"]="R";
+$PERM["lichnyy-kabinet-pokupatel"]["2"]="D";
+$PERM["lichnyy-kabinet-pokupatel"]["8"]="D";
+$PERM["lichnyy-kabinet-pokupatel"]["7"]="R";
+$PERM["lichnyy-kabinet-pokupatel"]["6"]="D";
 $PERM["index.php"]["2"]="X";
 $PERM["index.php"]["8"]="X";
 $PERM["index.php"]["7"]="X";

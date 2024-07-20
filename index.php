@@ -76,16 +76,15 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"SORT_ORDER2" => "ASC"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
+	"bitrix:main.include",
+	".default",
+	Array(
+		"AREA_FILE_RECURSIVE" => "Y",
 		"AREA_FILE_SHOW" => "page",
 		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "standard.php",
 		"COMPONENT_TEMPLATE" => ".default",
-		"AREA_FILE_RECURSIVE" => "Y"
-	),
-	false
+		"EDIT_TEMPLATE" => "standard.php"
+	)
 );?>
 <p>
 </p>

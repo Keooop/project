@@ -5,7 +5,7 @@ $aMenuLinks = Array(
 		"/obyavleniya/index.php", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,7))" 
+		"CSite::InGroup(array(1,6))" 
 	)
 );
 ?>

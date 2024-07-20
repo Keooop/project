@@ -1,11 +1,11 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Избранные", 
+		"Избранное", 
 		"/obyavleniya/index.php", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6))" 
+		"CSite::InGroup(array(1,7))" 
 	)
 );
 ?>
