@@ -1,3 +1,0 @@
-<?      
-$MASS ['NAVIGATIONS']= 'Navigations';
-?>

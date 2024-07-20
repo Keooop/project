@@ -1,4 +1,5 @@
 <?
+$PERM["/"]["*"]="R";
 $PERM["bitrix"]["2"]="R";
 $PERM["bitrix"]["8"]="D";
 $PERM["bitrix"]["7"]="R";
@@ -139,7 +140,6 @@ $PERM[".git"]["2"]="R";
 $PERM[".git"]["8"]="R";
 $PERM[".git"]["7"]="R";
 $PERM[".git"]["6"]="R";
-$PERM["/"]["*"]="R";
 $PERM[".section.php"]["8"]="D";
 $PERM[".section.php"]["*"]="D";
 ?>
