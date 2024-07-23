@@ -1,36 +1,57 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Новости", 
-		"/news/index.php", 
+		"Главная", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Вакансии", 
-		"/vakansii/index.php", 
+		"Купить", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
-		"/services/kontakty/index.php", 
+		"Аренда", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Агенты", 
-		"/services/agenty/index.php", 
+		"Свойства", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Личный кабинет", 
-		"/lichnyy-kabinet/index.php", 
+		"О нас", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика Конфиденциальности", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Связаться с нами", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Условия", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 

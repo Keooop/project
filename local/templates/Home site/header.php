@@ -1,5 +1,8 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-	use Bitrix\Main\Page\Asset;
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+    die();
+}
+
+use Bitrix\Main\Page\Asset;
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
@@ -11,46 +14,44 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-  
- <?php 
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/jquery-ui.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.theme.default.min.css');
-  
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-datepicker.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/mediaelementplayer.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/animate.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/flaticon/font/flaticon.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/icomoon/style.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/fl-bigmug-line.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/aos.css');
-  Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
 
+ <?php
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/main.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/magnific-popup.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/jquery-ui.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.min.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.theme.default.min.css');
 
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-datepicker.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/mediaelementplayer.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/animate.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/flaticon/font/flaticon.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/fonts/icomoon/style.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/fl-bigmug-line.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/aos.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
 
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/js/mediaelement-and-player.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
-  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/js/mediaelement-and-player.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 
 ?>
-<? $APPLICATION->ShowHead(); ?>
+<?$APPLICATION->ShowHead();?>
 </head>
 
 <body>
-<? $APPLICATION->ShowPanel();?>
+<?$APPLICATION->ShowPanel();?>
     <div class="site-loader"></div>
 
 <div class="site-wrap">
@@ -71,38 +72,38 @@
           <p class="mb-0">
             <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
                 class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/tel.php"
-	)
+    "bitrix:main.include",
+    "",
+    array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "local/templates/Home site/include/tel.php",
+    )
 );?></span></a>
             <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
                 class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/mail.php"
-	)
+    "bitrix:main.include",
+    "",
+    array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "local/templates/Home site/include/mail.php",
+    )
 );?></span></a>
           </p>
         </div>
         <div class="col-6 col-md-6 text-right">
         <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/icon.php"
-	)
+    "bitrix:main.include",
+    "",
+    array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "local/templates/Home site/include/icon.php",
+    )
 );?>
         </div>
       </div>
@@ -114,14 +115,14 @@
       <div class="row align-items-center">
         <div class="col-8 col-md-8 col-lg-4">
           <h1 class=""><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/HomeSpace.php"
-	)
+    "bitrix:main.include",
+    "",
+    array(
+        "AREA_FILE_SHOW" => "file",
+        "AREA_FILE_SUFFIX" => "inc",
+        "EDIT_TEMPLATE" => "",
+        "PATH" => "local/templates/Home site/include/HomeSpace.php",
+    )
 );?><br></h1>
         </div>
         <div class="col-4 col-md-4 col-lg-8">
@@ -133,32 +134,26 @@
             <ul class="site-menu js-clone-nav d-none d-lg-block">
               <li class="active">
               <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"",
-Array(),
-false
+	"bitrix:menu", 
+	"top_multi", 
+	array(
+		"COMPONENT_TEMPLATE" => "top_multi",
+		"ROOT_MENU_TYPE" => "top",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"MENU_THEME" => "blue"
+	),
+	false
 );?>
-<a href="index.html">Home</a>
-              </li>
-              <li class="has-children">
-                <a href="properties.html">Properties</a>
-                <ul class="dropdown">
-                  <li><a href="#">Buy</a></li>
-                  <li><a href="#">Rent</a></li>
-                  <li><a href="#">Lease</a></li>
-                  <li class="has-children">
-                    <a href="#">Menu</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Menu One</a></li>
-                      <li><a href="#">Menu Two</a></li>
-                      <li><a href="#">Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+
             </ul>
           </nav>
         </div>

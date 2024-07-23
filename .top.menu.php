@@ -8,32 +8,32 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"О сервисе", 
-		"/services/index.php", 
+		"Свойства", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Объявления", 
-		"/obyavleniya/index.php", 
+		"Блог", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Личный кабинет", 
-		"/lichnyy-kabinet/lichnyy-kabinet-prodavets/index.php", 
+		"О нас", 
+		"/", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6))" 
+		"" 
 	),
 	Array(
-		"Личный кабинет", 
-		"/lichnyy-kabinet/lichnyy-kabinet-pokupatel/index.php", 
+		"Контакты", 
+		"/", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,7))" 
+		"" 
 	)
 );
 ?>

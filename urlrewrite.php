@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  3 => 
+  9 => 
   array (
     'CONDITION' => '#^/services/novosti/#',
     'RULE' => '',
