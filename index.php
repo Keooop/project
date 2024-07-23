@@ -98,22 +98,7 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 		</div>
 	</div>
 </div>
-<div class="site-section site-section-sm bg-light">
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-12">
-				<div class="site-section-title">
-					 <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	".default",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"COMPONENT_TEMPLATE" => ".default",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/PROPERTIES.php"
-	)
-);?> <?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.line",
 	"template",
 	Array(
@@ -130,9 +115,12 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
+		"SORT_ORDER2" => "ASC",
+		"NEW_PROPER" => "New Properties for You"
+
 	)
-);?><br>
+);?>
+
 					<div class="site-section">
 						<div class="container">
 							<div class="row justify-content-center">

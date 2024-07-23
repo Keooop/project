@@ -134,38 +134,25 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 );?><br></h1>
         </div>
         
-        <div class="col-4 col-md-4 col-lg-8">
-          <nav class="site-navigation text-right text-md-right" role="navigation">
-
-            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
-                class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
-            <ul class="site-menu js-clone-nav d-none d-lg-block">
-              <li class="active">
-              <?$APPLICATION->IncludeComponent(
+		<?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"top_multi", 
+	"top_multi2", 
 	array(
-		"COMPONENT_TEMPLATE" => "top_multi",
-		"ROOT_MENU_TYPE" => "top",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MAX_LEVEL" => "2",
-		"CHILD_MENU_TYPE" => "left",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N",
-		"DELAY" => "N",
-		"ALLOW_MULTI_SELECT" => "N",
-		"MENU_THEME" => "blue"
+		"COMPONENT_TEMPLATE" => "top_multi2"
 	),
 	false
 );?>
-
-            </ul>
-          </nav>
-        </div>
 
 
       </div>
