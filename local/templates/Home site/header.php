@@ -72,38 +72,44 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
           <p class="mb-0">
             <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
                 class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-    "bitrix:main.include",
-    "",
-    array(
-        "AREA_FILE_SHOW" => "file",
-        "AREA_FILE_SUFFIX" => "inc",
-        "EDIT_TEMPLATE" => "",
-        "PATH" => "local/templates/Home site/include/tel.php",
-    )
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/Home site/include/tel.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?></span></a>
             <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
                 class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-    "bitrix:main.include",
-    "",
-    array(
-        "AREA_FILE_SHOW" => "file",
-        "AREA_FILE_SUFFIX" => "inc",
-        "EDIT_TEMPLATE" => "",
-        "PATH" => "local/templates/Home site/include/mail.php",
-    )
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/Home site/include/mail.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?></span></a>
           </p>
         </div>
         <div class="col-6 col-md-6 text-right">
         <?$APPLICATION->IncludeComponent(
-    "bitrix:main.include",
-    "",
-    array(
-        "AREA_FILE_SHOW" => "file",
-        "AREA_FILE_SUFFIX" => "inc",
-        "EDIT_TEMPLATE" => "",
-        "PATH" => "local/templates/Home site/include/icon.php",
-    )
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/Home site/include/icon.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
         </div>
       </div>
@@ -115,16 +121,19 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
       <div class="row align-items-center">
         <div class="col-8 col-md-8 col-lg-4">
           <h1 class=""><?$APPLICATION->IncludeComponent(
-    "bitrix:main.include",
-    "",
-    array(
-        "AREA_FILE_SHOW" => "file",
-        "AREA_FILE_SUFFIX" => "inc",
-        "EDIT_TEMPLATE" => "",
-        "PATH" => "local/templates/Home site/include/HomeSpace.php",
-    )
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/Home site/include/HomeSpace.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?><br></h1>
         </div>
+        
         <div class="col-4 col-md-4 col-lg-8">
           <nav class="site-navigation text-right text-md-right" role="navigation">
 
@@ -144,7 +153,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MAX_LEVEL" => "1",
+		"MAX_LEVEL" => "2",
 		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "N",
 		"DELAY" => "N",
@@ -163,3 +172,14 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
     </div>
   </div>
 </div>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"Nav", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "Nav"
+	),
+	false
+);?><br>

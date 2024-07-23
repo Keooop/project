@@ -1,9 +1,9 @@
 <?
-$sSectionName = "Вакансии";
-$arDirProperties = Array(
-   "description" => "Вакансии",
-   "keywords" => "Вакансии",
-   "title" => "Вакансии",
-   "keywords_inner" => "Вакансии"
+$sSectionName = "О сервисе";
+$arDirProperties = array(
+   "description" => "О сервисе",
+   "keywords" => "О сервисе",
+   "title" => "О сервисе",
+   "keywords_inner" => "О сервисе"
 );
 ?>

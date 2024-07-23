@@ -15,15 +15,13 @@ $APPLICATION->SetTitle("Личный кабинет покупатель");
  <br>
  <br>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:subscribe.form", 
-	".default", 
-	array(
+	"bitrix:subscribe.form",
+	"",
+	Array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
 		"PAGE" => "#SITE_DIR#about/subscr_edit.php",
 		"SHOW_HIDDEN" => "Y",
-		"USE_PERSONALIZATION" => "Y",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
+		"USE_PERSONALIZATION" => "Y"
+	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

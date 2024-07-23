@@ -8,14 +8,16 @@ use Bitrix\Main\Page\Asset;
         <div class="col-lg-4">
           <div class="mb-5">
           <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
+	"bitrix:main.include", 
+	".default", 
+	array(
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/about.php"
-	)
+		"PATH" => "/local/templates/Home site/include/about.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?></div>
         </div>
 
@@ -24,14 +26,16 @@ use Bitrix\Main\Page\Asset;
           <div class="row mb-5">
             <div class="col-md-12">  
             <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
+	"bitrix:main.include", 
+	".default", 
+	array(
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/footer_menu.php"
-	)
+		"PATH" => "/local/templates/Home site/include/footer_menu.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
             </div>
         <?$APPLICATION->IncludeComponent(
@@ -59,14 +63,16 @@ use Bitrix\Main\Page\Asset;
         <div class="col-lg-4 mb-5 mb-lg-0">
                     <div>
           <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
+	"bitrix:main.include", 
+	".default", 
+	array(
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/follow.php"
-	)
+		"PATH" => "/local/templates/Home site/include/follow.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
           </div>
 
@@ -80,14 +86,16 @@ use Bitrix\Main\Page\Asset;
           <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
+	"bitrix:main.include", 
+	".default", 
+	array(
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
 		"EDIT_TEMPLATE" => "",
-		"PATH" => "local/templates/Home site/include/Copyright.php"
-	)
+		"PATH" => "/local/templates/Home site/include/Copyright.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>

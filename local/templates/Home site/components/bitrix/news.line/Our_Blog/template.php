@@ -26,9 +26,10 @@ $this->setFrameMode(true);
  			<span class="d-block text-secondary small text-uppercase"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>
 					<h2 class="h5 text-black mb-3"><a href="#"><?echo $arItem['NAME'] ?></a></h2>
 					<p>
-					<?echo $arItem["DETAIL_TEXT"]; ?>
+						<?echo $arItem["DETAIL_TEXT"]; ?>
 					</p>
 				</div>
+		</a> 
 	</div>
 	<?endforeach;?>
 </div>

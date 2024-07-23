@@ -1,7 +1,7 @@
 <?
-$sSectionName = "Личный кабинет";
-$arDirProperties = array(
-   "description" => "Личный кабинет",
+$sSectionName = "Главная";
+$arDirProperties = Array(
+   "description" => "Главная",
    "ROBOTS" => "index, follow"
 );
 ?>
