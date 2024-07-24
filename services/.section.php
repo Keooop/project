@@ -1,6 +1,6 @@
 <?
-$sSectionName = "О сервисе";
-$arDirProperties = array(
+$sSectionName = "О Сервисе";
+$arDirProperties = Array(
 
 );
 ?>

@@ -65,6 +65,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
+		"SEF_FOLDER" => "/services/novosti/",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
@@ -86,7 +87,6 @@ $APPLICATION->SetTitle("Новости");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "bootstrap_v4",
-		"SEF_FOLDER" => "/services/novosti/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

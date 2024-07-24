@@ -40,7 +40,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
             </p><br>
             <p class="mb-2"><strong>
                     <?echo $arItem['PROPERTIES']['PRICE']['VALUE'] ?>
-                </strong></p>
+                    ₽</strong></p>
 
 
             <p class="mb-0"><a href="<?=$arItem['~DETAIL_PAGE_URL'];?>"

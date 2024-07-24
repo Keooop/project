@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("Мои Объявлеия");
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "N",
+		"AJAX_MODE" => "Y",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
@@ -61,7 +61,7 @@ $APPLICATION->SetTitle("Мои Объявлеия");
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
@@ -79,9 +79,15 @@ $APPLICATION->SetTitle("Мои Объявлеия");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"COMPONENT_TEMPLATE" => ".default",
-		"VARIABLE_ALIASES" => array(
-			"SECTION_ID" => "SECTION_ID",
-			"ELEMENT_ID" => "ELEMENT_ID",
+		"SEF_FOLDER" => "/lichnyy-kabinet/lichnyy-kabinet-prodavets/moi-obyavleiya/",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"USE_SHARE" => "N",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "",
+			"section" => "#SECTION_CODE#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

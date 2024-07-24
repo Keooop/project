@@ -1,13 +1,6 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Купить", 
 		"", 
 		Array(), 
@@ -29,28 +22,7 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"О нас", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Политика Конфиденциальности", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Связаться с нами", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Условия", 
+		"О сервисе", 
 		"", 
 		Array(), 
 		Array(), 

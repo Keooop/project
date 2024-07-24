@@ -72,45 +72,51 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
           <p class="mb-0">
             <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
                 class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/Home site/include/tel.php",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?></span></a>
-            <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
-                class="d-none d-md-inline-block ml-2"><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/Home site/include/mail.php",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?></span></a>
+					"bitrix:main.include", 
+					".default", 
+					array(
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "inc",
+						"EDIT_TEMPLATE" => "",
+						"PATH" => "/local/templates/Home site/include/tel.php",
+						"COMPONENT_TEMPLATE" => ".default"
+					),
+					false
+					);?>
+				</span>
+			</a>
+            <a href="#"><span class="text-black fl-bigmug-line-email64"></span> 
+			
+				<span class="d-none d-md-inline-block ml-2">
+					<?$APPLICATION->IncludeComponent(
+					"bitrix:main.include", 
+					".default", 
+					array(
+					"AREA_FILE_SHOW" => "file",
+					"AREA_FILE_SUFFIX" => "inc",
+					"EDIT_TEMPLATE" => "",
+					"PATH" => "/local/templates/Home site/include/mail.php",
+					"COMPONENT_TEMPLATE" => ".default"
+						),
+						false
+					);?>
+				</span>
+			</a>
           </p>
         </div>
         <div class="col-6 col-md-6 text-right">
-        <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/Home site/include/icon.php",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
+						<?$APPLICATION->IncludeComponent(
+					"bitrix:main.include", 
+					".default", 
+					array(
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "inc",
+						"EDIT_TEMPLATE" => "",
+						"PATH" => "/local/templates/Home site/include/icon.php",
+						"COMPONENT_TEMPLATE" => ".default"
+					),
+					false
+				);?>
         </div>
       </div>
     </div>
@@ -144,8 +150,8 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 		"MAX_LEVEL" => "3",
 		"MENU_CACHE_GET_VARS" => array(
 		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "86 400",
+		"MENU_CACHE_TYPE" => "Y",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N",

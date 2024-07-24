@@ -14,6 +14,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// echo '<pre>';
+// var_dump($arResult['ITEMS']);
+// echo '</pre>';
 // echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arParams, 1) . "</pre>";
 ?>
 <div class="site-section site-section-sm bg-light">
@@ -32,9 +35,9 @@ $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID(
 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 ?>
             <div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
-          <a href="<?=$arItem['~DETAIL_PAGE_URL'];?>" class="prop-entry d-block">
+          <a href="<?=$arItem['DETAIL_PAGE_URL'];?>" class="prop-entry d-block">
             <figure>
-              <img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>" alt="Image" class="img-fluid">
+              <img src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -46,19 +49,19 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
                 <div class="inner d-flex">
                   <div class="col">
                     <span>Площадь</span>
-                    <strong><?echo $arItem["PROPERTY_SQUARE_VALUE"] ?>sup>2</sup></strong>
+                    <strong><?echo $arItem["PROPERTY_SQUARE_VALUE"] ?>м<sup>2</sup></strong>
                   </div>
                   <div class="col">
-                    <span>Спальня:</span>
-                    <strong>2</strong>
+                    <span>Этажей</span>
+                    <strong><?echo $arItem["PROPERTY_NUMBER_FLOORS_VALUE"] ?></strong>
                   </div>
                   <div class="col">
-                    <span>Baths:</span>
-                    <strong><?echo $arItem["PROPERTY_BATH_VALUE"]; ?></strong>
+                    <span>Туалет:</span>
+                    <strong><?echo $arItem["PROPERTY_NUMBER_BATHROOMS_VALUE"]; ?></strong>
                   </div>
                   <div class="col">
                     <span>Гаражи:</span>
-                    <strong><?echo $arItem["PROPERTY_GARAGES_VALUE"]; ?></strong>
+                    <strong><?echo $arItem["PROPERTY_GARAGE_AVAILABILITY_VALUE"]; ?></strong>
                   </div>
                 </div>
               </div>
