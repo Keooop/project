@@ -1,6 +1,13 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Главная", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Купить", 
 		"", 
 		Array(), 
@@ -16,13 +23,6 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Свойства", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"О сервисе", 
 		"", 
 		Array(), 
 		Array(), 

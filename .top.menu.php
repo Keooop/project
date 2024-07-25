@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Объявление", 
-		"/obyavleniya/", 
+		"/ads/", 
 		Array(), 
 		Array(), 
 		"" 

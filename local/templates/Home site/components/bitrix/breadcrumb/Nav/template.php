@@ -6,7 +6,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  */
 
 global $APPLICATION;
-
+// echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arResult, 1) . "</pre>";
 //delayed function must return a string
 if(empty($arResult))
 	return "";

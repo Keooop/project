@@ -1,106 +1,188 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Объявления");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:news", 
-	".default", 
+?><div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row align-items-center justify-content-center text-center">
+			<div class="col-md-10">
+				<h1 class="mb-2">Объявления</h1>
+				 <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"Nav",
+	Array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	)
+);?>
+			</div>
+		</div>
+	</div>
+</div>
+ <br>
+<div class="pt-5">
+	<div class="container">
+		<form class="row">
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Lot Area</option>
+						<option value="1000">1000</option>
+						<option value="800">800</option>
+						<option value="600">600</option>
+						<option value="400">400</option>
+						<option value="200">200</option>
+						<option value="100">100</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Property Status</option>
+						<option value="For Sale">For Sale</option>
+						<option value="For Rent">For Rent</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Location</option>
+						<option value="United States">United States</option>
+						<option value="United Kingdom">United Kingdom</option>
+						<option value="Canada">Canada</option>
+						<option value="Belgium">Belgium</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Lot Area</option>
+						<option value="1000">1000</option>
+						<option value="800">800</option>
+						<option value="600">600</option>
+						<option value="400">400</option>
+						<option value="200">200</option>
+						<option value="100">100</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Bedrooms</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5+">5+</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="select-wrap">
+ <span class="icon icon-arrow_drop_down"></span>
+					<select name="offer-types" id="offer-types" class="form-control d-block rounded-0">
+						<option value="">Bathrooms</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5+">5+</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+				<div class="mb-4">
+					<div id="slider-range" class="border-primary">
+					</div>
+ <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+ <input type="submit" class="btn btn-primary btn-block form-control-same-height rounded-0" value="Search">
+			</div>
+		</form>
+	</div>
+</div>
+<div class="site-section site-section-sm bg-light">
+	<div class="container">
+		<div class="row mb-5">
+		<?$APPLICATION->IncludeComponent(
+	"bitrix:news.line", 
+	"template", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"BROWSER_TITLE" => "-",
-		"CACHE_FILTER" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
-		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
+		"CACHE_TIME" => "600",
+		"CACHE_TYPE" => "Y",
+		"COMPONENT_TEMPLATE" => "template",
+		"DETAIL_URL" => "",
+		"FIELD_CODE" => array(
+			0 => "ID",
+			1 => "CODE",
+			2 => "XML_ID",
+			3 => "NAME",
+			4 => "TAGS",
+			5 => "SORT",
+			6 => "PREVIEW_TEXT",
+			7 => "PREVIEW_PICTURE",
+			8 => "DETAIL_TEXT",
+			9 => "DETAIL_PICTURE",
+			10 => "DATE_ACTIVE_FROM",
+			11 => "ACTIVE_FROM",
+			12 => "DATE_ACTIVE_TO",
+			13 => "ACTIVE_TO",
+			14 => "SHOW_COUNTER",
+			15 => "SHOW_COUNTER_START",
+			16 => "IBLOCK_TYPE_ID",
+			17 => "IBLOCK_ID",
+			18 => "IBLOCK_CODE",
+			19 => "IBLOCK_NAME",
+			20 => "IBLOCK_EXTERNAL_ID",
+			21 => "DATE_CREATE",
+			22 => "CREATED_BY",
+			23 => "CREATED_USER_NAME",
+			24 => "TIMESTAMP_X",
+			25 => "MODIFIED_BY",
+			26 => "USER_NAME",
+			27 => "PROPERTY_PRiCE",
+			28 => "PROPERTY_SQUARE",
+			29 => "PROPERTY_BEDROOM",
+			30 => "PROPERTY_BATH",
+			31 => "PROPERTY_GARAGES",
+			32 => "PROPERTY_PRIORITY",
+			33 => "",
 		),
-		"DETAIL_PAGER_SHOW_ALL" => "Y",
-		"DETAIL_PAGER_TEMPLATE" => "",
-		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+		"IBLOCKS" => array(
+			0 => "8",
 		),
-		"DETAIL_SET_CANONICAL_URL" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "7",
-		"IBLOCK_TYPE" => "Slayder",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"MESSAGE_404" => "",
-		"META_DESCRIPTION" => "-",
-		"META_KEYWORDS" => "-",
+		"IBLOCK_TYPE" => "news",
 		"NEWS_COUNT" => "9",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "Y",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"USE_CATEGORIES" => "N",
-		"USE_FILTER" => "N",
-		"USE_PERMISSIONS" => "N",
-		"USE_RATING" => "N",
-		"USE_REVIEW" => "N",
-		"USE_RSS" => "N",
-		"USE_SEARCH" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
-		"TEMPLATE_THEME" => "blue",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"USE_SHARE" => "N",
-		"LIST_USE_SHARE" => "",
-		"SLIDER_PROPERTY" => "",
-		"SEF_FOLDER" => "/obyavleniya/",
-		"TAGS_CLOUD_ELEMENTS" => "150",
-		"PERIOD_NEW_TAGS" => "",
-		"DISPLAY_AS_RATING" => "rating",
-		"FONT_MAX" => "50",
-		"FONT_MIN" => "10",
-		"COLOR_NEW" => "3E74E6",
-		"COLOR_OLD" => "C0C0C0",
-		"TAGS_CLOUD_WIDTH" => "100%",
-		"MEDIA_PROPERTY" => "",
-		"SEF_URL_TEMPLATES" => array(
-			"news" => "",
-			"section" => "#SECTION_CODE#/",
-			"detail" => "#ELEMENT_CODE#/",
-		)
+		"NEW_PROPER" => "New Properties for You"
 	),
 	false
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div class="site-pagination">
+ <a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a>
+					... <a href="#">10</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

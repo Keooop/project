@@ -3,7 +3,7 @@
 use PhpParser\Node\Stmt\Global_;
 
 require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php";
-$APPLICATION->SetTitle("Главная");
+$APPLICATION->SetTitle("О нас");
 $APPLICATION->SetPageProperty("tags", "Главная");
 $APPLICATION->SetPageProperty("keywords", "Главная");
 $APPLICATION->SetPageProperty("description", "Главная");
@@ -12,7 +12,7 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 	<div class="container">
 		<div class="row align-items-center justify-content-center text-center">
 			<div class="col-md-10">
-				<h1 class="mb-2">О Сервисе</h1>
+			<h1 class="mb-2"><? $APPLICATION->ShowTitle(false,false); ?></h1>
 				 <?$APPLICATION->IncludeComponent(
 	"bitrix:breadcrumb",
 	"Nav",
