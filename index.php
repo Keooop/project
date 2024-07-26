@@ -8,6 +8,7 @@ $APPLICATION->SetPageProperty("tags", "Главная");
 $APPLICATION->SetPageProperty("keywords", "Главная");
 $APPLICATION->SetPageProperty("description", "Главная");
 $APPLICATION->SetPageProperty("title", "Агентство Недвижимости");
+$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 ?><?
 	$GLOBALS['arrFilterTop']['PROPERTY_41'] = '9';	
 	$APPLICATION->IncludeComponent(
