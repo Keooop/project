@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"bootstrap_v4", 
+	"mcart", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -18,6 +18,7 @@ $APPLICATION->SetTitle("Новости");
 		"CACHE_TIME" => "604 800",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "mcart",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -30,7 +31,10 @@ $APPLICATION->SetTitle("Новости");
 		"DETAIL_PAGER_TITLE" => "Страница",
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "",
-			1 => "",
+			1 => "PHOTOGALLERY",
+			2 => "DISLIKE",
+			3 => "LIKE",
+			4 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -40,7 +44,7 @@ $APPLICATION->SetTitle("Новости");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "1",
+		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "news",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -49,8 +53,10 @@ $APPLICATION->SetTitle("Новости");
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "PHOTOGALLERY",
+			1 => "DISLIKE",
+			2 => "LIKE",
+			3 => "",
 		),
 		"LIST_USE_SHARE" => "",
 		"MESSAGE_404" => "",
@@ -86,7 +92,6 @@ $APPLICATION->SetTitle("Новости");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "bootstrap_v4",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
@@ -94,4 +99,5 @@ $APPLICATION->SetTitle("Новости");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>&nbsp;&nbsp;
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
