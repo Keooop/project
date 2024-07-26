@@ -23,7 +23,7 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "600",
+		"CACHE_TIME" => "259 200",
 		"CACHE_TYPE" => "Y",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "Slayder",
@@ -57,9 +57,9 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "PREFERRED_DEAL",
-			2 => "LINK",
+			0 => "LINK",
+			1 => "PRIORITY",
+			2 => "PREFERRED_DEAL",
 			3 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
@@ -232,42 +232,60 @@ $APPLICATION->SetPageProperty("title", "Агентство Недвижимос�
 	false
 );?>&nbsp;
 							 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"our_service",
-	Array(
+	"bitrix:news.line", 
+	"our_service", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "86 400",
-		"CACHE_TYPE" => "Y",
+		"CACHE_TIME" => "7 775 999",
+		"CACHE_TYPE" => "A",
 		"COMPONENT_TEMPLATE" => "our_service",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(0=>"NAME",1=>"DETAIL_TEXT",2=>"PROPERTY_LINK",3=>"PROPERTY_ICON",4=>"",),
-		"IBLOCKS" => array(0=>"6",),
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "DETAIL_TEXT",
+			2 => "PROPERTY_LINK",
+			3 => "PROPERTY_ICON",
+			4 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "6",
+		),
 		"IBLOCK_TYPE" => "Services",
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?>
 							<?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"Our_Blog",
-	Array(
+	"bitrix:news.line", 
+	"Our_Blog", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.M.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "86 400",
+		"CACHE_TIME" => "604 800",
 		"CACHE_TYPE" => "A",
 		"COMPONENT_TEMPLATE" => "Our_Blog",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_PICTURE",2=>"DETAIL_TEXT",3=>"DATE_ACTIVE_FROM",4=>"",),
-		"IBLOCKS" => array(0=>"1",),
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "PREVIEW_PICTURE",
+			2 => "DETAIL_TEXT",
+			3 => "DATE_ACTIVE_FROM",
+			4 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "1",
+		),
 		"IBLOCK_TYPE" => "news",
 		"NEWS_COUNT" => "3",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?><?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>

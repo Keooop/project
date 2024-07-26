@@ -35,11 +35,12 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 				<a href="<?echo $arItem["PROPERTY_LINK_VALUE"] ?>" class="service text-center border rounded">
 					<span class="<?echo $arItem["PROPERTY_ICON_VALUE"]?>"></span>
 					<h2 class="service-heading"><?echo $arItem['NAME'] ?></h2>
-					<p><span class="read-more">Подробнее</span></p>
+					<p><span class="read-more"><?=GetMessage("LEARN_MORE");?></span></p>
           		</a>
         	</div>
 
 <?endforeach;?>
+
 		</div>		
     </div>
   </div>
