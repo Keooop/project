@@ -1,7 +1,7 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
-
+$this->setFrameMode(true);
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -17,7 +17,6 @@
 // echo '<pre>';
 // var_dump($arResult['ITEMS']);
 // echo '</pre>';
-
 
 ?>
 <div class="site-section site-section-sm bg-light">
@@ -77,3 +76,4 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
       </div>
 </div>
 </div>
+<?=$arResult['NAV_STRING']?>
