@@ -12,19 +12,18 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-// echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arResult['ITEMS'], 1) . "</pre>";
 ?>
 
 <div class="site-section">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-7 text-center mb-5">
+      	<div class="row justify-content-center">
+      		  <div class="col-md-7 text-center mb-5">
           <div class="site-section-title">
-            <h2>Наши Услуги</h2>
+            <h2><?=GetMessage("OUR_SERVICES");?></h2>
         	</div>
-        </div>
-      </div>
-	  <div class="row">
+      		  </div>
+     	</div>
+		<div class="row">
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?
 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -41,6 +40,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 <?endforeach;?>
 
-		</div>		
+		</div>	
+
     </div>
-  </div>
+</div>

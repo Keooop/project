@@ -47,7 +47,10 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 
 ?>
-<?$APPLICATION->ShowHead();?>
+<?$APPLICATION->ShowHead();
+define("NEED_AUTH", true);
+
+?>
 </head>
 
 <body>

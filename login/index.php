@@ -1,17 +1,26 @@
 <?
-define("NEED_AUTH", true);
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-if (is_string($_REQUEST["backurl"]) && mb_strpos($_REQUEST["backurl"], "/") === 0)
-{
-	LocalRedirect($_REQUEST["backurl"]);
-}
+use PhpParser\Node\Stmt\Global_;
 
-$APPLICATION->SetTitle("Вход на сайт");
-?><p>
-	Вы зарегистрированы и успешно авторизовались.
-</p>
-<p>
-	<a href="<?=SITE_DIR?>">Вернуться на главную страницу</a>
-</p>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php";
+$APPLICATION->SetTitle("Авторизация");
+$APPLICATION->SetPageProperty("tags", "Главная");
+$APPLICATION->SetPageProperty("keywords", "Главная");
+$APPLICATION->SetPageProperty("description", "Главная");
+$APPLICATION->SetPageProperty("title", "Авторизация");
+?><?
+global $USER;
+if ($USER->IsAuthorized()) echo "Вы авторизованы!";
+?> <br>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:main.auth.form",
+	".default",
+	Array(
+		"AUTH_FORGOT_PASSWORD_URL" => "",
+		"AUTH_REGISTER_URL" => "/login/registration",
+		"AUTH_SUCCESS_URL" => "/lichnyy-kabinet/index.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	)
+);?><br>
+<br>
+ <br><?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>

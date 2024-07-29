@@ -36,8 +36,8 @@ $aMenuLinks = Array(
 		"CSite::InGroup(array(1,6))" 
 	),
 	Array(
-		"", 
-		"", 
+		"Авторизация", 
+		"/login/index.php", 
 		Array(), 
 		Array(), 
 		"" 

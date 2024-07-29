@@ -5,4 +5,9 @@ $APPLICATION->SetTitle("Личный кабинет продавец");
 	"bitrix:main.profile",
 	"",
 Array()
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?if($USER->IsAuthorized()):?>
+	<a href="/?logout=yes&<?=bitrix_sessid_get()?>">Выйти</a>
+	<?endif?>
+	<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
