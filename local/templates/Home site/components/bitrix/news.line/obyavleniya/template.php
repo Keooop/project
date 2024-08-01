@@ -64,7 +64,6 @@ $this->setFrameMode(true);
           </a>
         </div>
 		<?endforeach;?>
-			<? echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arItem, 1) . "</pre>";?>
       </div>
 
     </div>

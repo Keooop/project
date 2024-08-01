@@ -18,16 +18,10 @@ $navQueryString      = ($arResult["NavQueryString"] != "" ? $arResult["NavQueryS
 $navQueryStringFull  = ($arResult["NavQueryString"] != "" ? "?".$arResult["NavQueryString"] : "");
 
 ?>
-   <div class="row">
+      <div class="row">
           <div class="col-md-12 text-center">
             <div class="site-pagination">
-    <div>
-        <?php echo $arResult["NavTitle"] ?>
-        <?php echo $arResult["NavFirstRecordShow"] ?>—<?php echo $arResult["NavLastRecordShow"] ?> из <?php echo $arResult["NavRecordCount"] ?>
-    </div>
-
-    <div class="numbers">
-    <?php while ($arResult["nStartPage"] <= $arResult["nEndPage"]) { ?>
+            <?php while ($arResult["nStartPage"] <= $arResult["nEndPage"]) { ?>
         <?php if ($arResult["nStartPage"] == $arResult["NavPageNomer"]) { ?>
             <span class="active"><?php echo $arResult["nStartPage"] ?></span>
         <?php } elseif ((1 == $arResult["nStartPage"]) && (false == $arResult["bSavePage"])) { ?>
@@ -37,6 +31,8 @@ $navQueryStringFull  = ($arResult["NavQueryString"] != "" ? "?".$arResult["NavQu
         <?php } ?>
         <?php $arResult["nStartPage"]++ ?>
     <?php } ?>
-    </div>
+
+            </div>
           </div>  
         </div>
+        

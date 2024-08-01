@@ -13,14 +13,15 @@ global $USER;
 if ($USER->IsAuthorized()) echo "Вы авторизованы!";
 ?> <br>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:main.auth.form",
-	".default",
-	Array(
+	"bitrix:main.auth.form", 
+	".default", 
+	array(
 		"AUTH_FORGOT_PASSWORD_URL" => "",
 		"AUTH_REGISTER_URL" => "/login/registration",
 		"AUTH_SUCCESS_URL" => "/lichnyy-kabinet/index.php",
 		"COMPONENT_TEMPLATE" => ".default"
-	)
+	),
+	false
 );?><br>
 <br>
  <br><?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>

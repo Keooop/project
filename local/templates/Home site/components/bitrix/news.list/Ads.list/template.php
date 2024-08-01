@@ -13,10 +13,7 @@ $this->setFrameMode(true);
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-// $this->setFrameMode(true);
-// echo '<pre>';
-// var_dump($arResult['ITEMS']);
-// echo '</pre>';
+
 
 ?>
 <div class="site-section site-section-sm bg-light">
@@ -75,10 +72,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 </div>
 </div>
-<div class="row">
-          <div class="col-md-12 text-center">
-            <div class="site-pagination">
-              <?=$arResult['NAV_STRING']?>
-            </div>
-          </div>  
 </div>
+<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+	<?=$arResult["NAV_STRING"]?>
+<?endif;?>

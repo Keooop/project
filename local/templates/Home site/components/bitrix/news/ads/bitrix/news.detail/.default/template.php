@@ -34,13 +34,9 @@ $this->setFrameMode(true);
           <div class="col-lg-8" style="margin-top: -150px;">
             <div class="mb-5">
               <div class="slide-one-item home-slider owl-carousel">
-			
-
-                    <? foreach ($arResult["PROPERTIES"]["IMAGE_GALLERY"]["VALUE"] as $arImgID): 
-                $arImage[$arImgID] = CFile::GetFileArray($arImgID);?>
-                  <div> <img src="<?= $arImage[$arImgID]["SRC"] ?>" alt="<?= $arResult["NAME"] ?>"/></div>
-                    <? endforeach;?>
-		 
+                  <? foreach ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arImgID):?>
+                  <div><img src="<?= $arImgID["SRC"] ?>" alt="Image" class="img-fluid"></div>
+                <? endforeach;?>
               </div>
             </div>
             <div class="bg-white">
@@ -85,18 +81,13 @@ $this->setFrameMode(true);
                   <div class="col-12">
                     <h2 class="h4 text-black mb-3"><?echo $arResult['PROPERTIES']['IMAGE_GALLERY']['NAME'];?></h2>
                   </div>
-                    <? foreach ($arResult["PROPERTIES"]["IMAGE_GALLERY"]["VALUE"] as $arImgID): 
-                    $arImage[$arImgID] = CFile::GetFileArray($arImgID);
-                    $renderImage = CFile::ResizeImageGet(
-                      $arImgID,
-                        Array("width" => 160, "height" => 160),
-                         BX_RESIZE_IMAGE_EXACT, false
-                          ); ?>
-                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="<?= $arImage[$arImgID]["SRC"] ?>" class="image-popup gal-item"><img src="<?= $renderImage["src"] ?>" alt="Image" class="img-fluid"></a>
+                  <? foreach ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arImgID):?>
+                  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                  <a href="<?= $arImgID["SRC"] ?>" dump class="image-popup gal-item"><img src="<?= $arImgID["SRC"] ?>" alt="Image" class="img-fluid"></a>
+
                 </div>
-                    <? endforeach;?>
-              </div>
+                <? endforeach;?>
+               </div>
             </div>
           </div>      
           <div class="col-lg-4 pl-md-5">
@@ -129,7 +120,25 @@ $this->setFrameMode(true);
             </div>
 
           </div>
+          <div>
+                <h4> <?echo $arResult['DISPLAY_PROPERTIES']['DOCUMENT']['NAME'];?></h4>
+
+                    <? foreach ($arResult["DISPLAY_PROPERTIES"]["DOCUMENT"]["VALUE"] as  $doc):
+                    $docID[$doc] = $arResult["DISPLAY_PROPERTIES"]["DOCUMENT"]["FILE_VALUE"]  ?>
+                            <div> 
+                              <img src="<?=$docID[$doc]['SRC'] ?>" alt="image">
+                            </div>
+                  <? endforeach;?>
+          </div>  
+            <div class ="link">
           
+                <h4> <?echo $arResult['DISPLAY_PROPERTIES']['LINK']['NAME'];?></h4>
+                <? foreach ($arResult['DISPLAY_PROPERTIES']['LINK']['VALUE'] as   $key=>$value): ;?>
+                      
+                <a  align = "center" href= '<?=$value?>'> <?=$arResult['DISPLAY_PROPERTIES']['LINK']['DESCRIPTION'][$key]?></a>
+                <? endforeach;?>
+          
+            </div>
         </div>
       </div>
     </div>
@@ -144,21 +153,6 @@ $this->setFrameMode(true);
                 
 
 
-  <h4> <?echo $arResult['DISPLAY_PROPERTIES']['DOCUMENT']['NAME'];?></h4>
 
-          <? foreach ($arResult['DISPLAY_PROPERTIES']['DOCUMENT']['VALUE'] as   $doc): 
-                $documents[$doc] = CFile::GetFileArray($doc);?>
-                  <div> <img src="<?= $documents[$doc]["SRC"] ?>" alt="<?= $arResult["NAME"] ?>"/></div>
-        <? endforeach;?>
 
-    </div>       
-<div>
-  
-<h4> <?echo $arResult['DISPLAY_PROPERTIES']['LINK']['NAME'];?></h4>
-<? foreach ($arResult['DISPLAY_PROPERTIES']['LINK']['VALUE'] as   $key=>$value): ;?>
-      
-<a href= '<?=$value?>'> <?=$arResult['DISPLAY_PROPERTIES']['LINK']['DESCRIPTION'][$key]?></a>
-        <? endforeach;?>
-  
-</div>
          

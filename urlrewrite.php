@@ -32,14 +32,6 @@ $arUrlRewrite=array (
     'PATH' => '/products/index.php',
     'SORT' => 100,
   ),
-  17 => 
-  array (
-    'CONDITION' => '#^\\??(.*)#',
-    'RULE' => '&$1',
-    'ID' => 'bitrix:catalog.smart.filter',
-    'PATH' => '/ads/index.php',
-    'SORT' => 100,
-  ),
   15 => 
   array (
     'CONDITION' => '#^/news/#',
@@ -48,7 +40,7 @@ $arUrlRewrite=array (
     'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
-  18 => 
+  17 => 
   array (
     'CONDITION' => '#^/ads/#',
     'RULE' => '',
