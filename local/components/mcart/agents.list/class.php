@@ -180,7 +180,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
          * Получить Избранных агентов для текущего пользователя записать их в массив $this->arResult['STAR_AGENTS']
          * Это можно сделать с помощью CUserOptions::GetOption
          */ 
-         $this->arResult['STAR_AGENTS'] = CUserOptions::GetOption($category, $name);
+         $this->arResult['STAR_AGENTS'] = CUserOptions::GetOption("main", "user_star");
         /*
          * Данного метода нет в документации, код метода и его параметры можно найти в ядре (/bitrix/modules/main/) или в гугле
          * $category - это категория настройки, можете придумать любую, например mcart_agent
@@ -384,21 +384,23 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
                     $userStar= [$userStar];
                 }
                 if (in_array($agentID,$userStar)){
-                   unset($userStar[$agentID]);                   
+                //    unset($userStar[$agentID]);       
+                       unset($userStar[array_search($agentID,$userStar)]);                
                 }
-                if (!in_array($agentID,$userStar)){
-                    $array[] =$agentID;                    
+                else{
+                    $userStar[] =$agentID;                    
                  }
+                 $value =$userStar;
             }        
-             $value = $agentID;
-                if (!is_array($value)){
-                    $agentID=$value;
+             
+                else {
+                    $value= $agentID;
                 }
 
                 $result = ['action' => 'success']; // ответ, который уйдет на фронт
     
             
-                $value = CUserOptions::SetOption($agentID,$value, false);// массив ID элементов, которые пользователь добавил в избраное
+              $value = CUserOptions::SetOption("main","user_star",$value);// массив ID элементов, которые пользователь добавил в избраное
                  /*
              * 1. Получить значения свойства из настроек пользователя (CUserOptions) для текущего пользователя
              * https://dev.1c-bitrix.ru/community/webdev/user/259944/blog/17105/
