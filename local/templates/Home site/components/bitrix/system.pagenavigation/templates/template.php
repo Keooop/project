@@ -23,7 +23,7 @@ $navQueryStringFull  = ($arResult["NavQueryString"] != "" ? "?".$arResult["NavQu
             <div class="site-pagination">
             <?php while ($arResult["nStartPage"] <= $arResult["nEndPage"]) { ?>
         <?php if ($arResult["nStartPage"] == $arResult["NavPageNomer"]) { ?>
-            <span class="active"><?php echo $arResult["nStartPage"] ?></span>
+            <a class="active"><?php echo $arResult["nStartPage"] ?></a>
         <?php } elseif ((1 == $arResult["nStartPage"]) && (false == $arResult["bSavePage"])) { ?>
             <a href="<?php echo $arResult["sUrlPath"] ?><?php echo $navQueryStringFull ?>"><?php echo $arResult["nStartPage"] ?></a>
         <?php } else { ?>

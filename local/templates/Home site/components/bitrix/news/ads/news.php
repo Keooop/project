@@ -59,6 +59,7 @@ $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"Ads.list",
 	[
+		'TITLE_NAME'=> $arParams["TITLE_NAME"],
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 		"NEWS_COUNT" => $arParams["NEWS_COUNT"],

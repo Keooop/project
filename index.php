@@ -137,7 +137,7 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 	</div>
 </div>
  <br>
-&nbsp;&nbsp;<?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	"obyavleniya", 
 	array(
@@ -194,7 +194,7 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 		"COMPONENT_TEMPLATE" => "obyavleniya"
 	),
 	false
-);?>&nbsp;&nbsp;
+);?>
 							 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line",
 	"our_service",

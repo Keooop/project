@@ -28,6 +28,11 @@ $arTemplateParameters = array(
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
 	),
+	'TITLE_NAME'=> array(
+		'NAME'=> GetMessage("T_IBLOCK_DESC_TITLE_NAME"),
+		"TYPE"=>"STRING",
+		"MULTIPLE" => 'N',				
+	),
 );
 
 if (($arCurrentValues['USE_SHARE'] ?? 'N') === 'Y')

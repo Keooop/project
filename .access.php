@@ -1,4 +1,5 @@
 <?
+$PERM["/"]["*"]="R";
 $PERM["login"]["8"]="D";
 $PERM["login"]["7"]="D";
 $PERM["login"]["6"]="D";
@@ -7,7 +8,6 @@ $PERM["index.php"]["G8"]="R";
 $PERM["index.php"]["G7"]="R";
 $PERM["index.php"]["G6"]="R";
 $PERM["index.php"]["*"]="R";
-$PERM["/"]["*"]="R";
 $PERM["vakansii"]["2"]="R";
 $PERM["vakansii"]["8"]="R";
 $PERM["vakansii"]["7"]="R";

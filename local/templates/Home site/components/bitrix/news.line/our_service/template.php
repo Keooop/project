@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 
 ?>
 
-<div class="site-section">
+<div class="site-section">			
     <div class="container">
       	<div class="row justify-content-center">
       		  <div class="col-md-7 text-center mb-5">
@@ -24,11 +24,11 @@ $this->setFrameMode(true);
       		  </div>
      	</div>
 		<div class="row">
-	<?foreach($arResult["ITEMS"] as $arItem):?>
-		<?
-$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-?>
+			<?foreach($arResult["ITEMS"] as $arItem):?>
+			<?
+			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage			('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+				?>
 
         	<div id="<?=$this->GetEditAreaId($arItem['ID']);?>" class="col-md-6 col-lg-4 mb-4">
 				<a href="<?echo $arItem["PROPERTY_LINK_VALUE"] ?>" class="service text-center border rounded">
@@ -37,8 +37,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 					<p><span class="read-more"><?=GetMessage("LEARN_MORE");?></span></p>
           		</a>
         	</div>
-
-<?endforeach;?>
+				<?endforeach;?>
 
 		</div>	
 
