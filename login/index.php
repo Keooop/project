@@ -12,16 +12,16 @@ $APPLICATION->SetPageProperty("title", "Авторизация");
 global $USER;
 if ($USER->IsAuthorized()) echo "Вы авторизованы!";
 ?> <br>
-<?$APPLICATION->IncludeComponent(
+ <?$APPLICATION->IncludeComponent(
 	"bitrix:main.auth.form", 
 	".default", 
 	array(
 		"AUTH_FORGOT_PASSWORD_URL" => "",
 		"AUTH_REGISTER_URL" => "/login/registration",
-		"AUTH_SUCCESS_URL" => "/lichnyy-kabinet/index.php",
+		"AUTH_SUCCESS_URL" => "/",
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
 );?><br>
-<br>
+ <br>
  <br><?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>

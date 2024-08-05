@@ -17,7 +17,7 @@ $APPLICATION->SetTitle("registration ");
 			1 => "NAME",
 			2 => "PERSONAL_PHONE",
 		),
-		"SUCCESS_PAGE" => "/lichnyy-kabinet/index.php",
+		"SUCCESS_PAGE" => "/login",
 		"USER_PROPERTY" => array(
 			0 => "UF_PROFILE",
 		),

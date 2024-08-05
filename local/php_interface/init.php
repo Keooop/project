@@ -1,4 +1,5 @@
 <?
+require($_SERVER["DOCUMENT_ROOT"]."/local/php_interface/include/MyUser.php");
 // скрипт в файле /bitrix/php_interface/init.php
 AddEventHandler("main", "OnBeforeUserLogin",  "CheckLogin");
 	function CheckLogin($arFields)
@@ -10,13 +11,12 @@ AddEventHandler("main", "OnBeforeUserLogin",  "CheckLogin");
 			return false;
 		}
 	}
-
-
-
 $eventManager = \Bitrix\Main\EventManager::getInstance();
 $eventManager->addEventHandler('', 'RealEstateAgentOnAfterAdd', 'RealEstateAgentClearCache');
 $eventManager->addEventHandler('', 'RealEstateAgentOnAfterUpdate', 'RealEstateAgentClearCache');
 $eventManager->addEventHandler('', 'RealEstateAgentOnAfterDelete', 'RealEstateAgentClearCache');
+
+$eventManager->addEventHandler('main', 'OnBeforeUserRegister', ['MyUser','OnBeforeUserAddHandler']);
 
 function RealEstateAgentClearCache(\Bitrix\Main\Entity\Event $event) {  
     $entity = $event->getEntity();
@@ -26,7 +26,4 @@ function RealEstateAgentClearCache(\Bitrix\Main\Entity\Event $event) {
 	$taggedCache->clearByTag('hlblock_table_name_' . $tableName);
 
 }
-
-
-
 ?>

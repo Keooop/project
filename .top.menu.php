@@ -37,10 +37,10 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Авторизация", 
-		"/login/index.php", 
+		"/login/", 
 		Array(), 
 		Array(), 
-		"" 
+		"!\$USER->IsAuthorized() || \$USER->IsAdmin()" 
 	)
 );
 ?>
