@@ -18,7 +18,7 @@ $aMenuLinks = Array(
 		"Расписание мероприятий", 
 		"/ex1/partneram/raspisanie-meropriyatiy/", 
 		Array(), 
-		Array(), 
+		Array("TXT"=>"Текс для пункта 1"), 
 		"" 
 	)
 );

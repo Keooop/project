@@ -2,7 +2,10 @@
 <html lang="ru">
 
 <head>
-    <title>Внутренняя</title>
+    <title>    <?
+    $APPLICATION-> ShowTitle();
+    ?></title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
     <meta name="keywords" content="">
@@ -17,9 +20,16 @@
     <script src="<?=SITE_TEMPLATE_PATH;?>/js/scripts.js"></script>
     <link rel="icon" type="image/vnd.microsoft.icon" href="<?=SITE_TEMPLATE_PATH;?>/img/favicon.ico">
     <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH;?>/img/favicon.ico">
+    <?
+    $APPLICATION-> ShowHead();
+    ?>
 </head>
 
 <body>
+<?
+    $APPLICATION-> ShowPanel();
+    ?>
+</head>
     <!-- wrap -->
     <div class="wrap">
         <!-- header -->
@@ -74,7 +84,23 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
         </header>
         <!-- /header -->
         <!-- nav -->
-        <nav class="nav">
+        <?$APPLICATION->IncludeComponent(
+	"bitrix:menu",
+	"horizontal_multilevel",
+	Array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(""),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N"
+	)
+);?>
+        <!-- <nav class="nav">
             <div class="inner-wrap">
                 <div class="menu-block popup-wrap">
                     <a href="" class="btn-menu btn-toggle"></a>
@@ -136,7 +162,7 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
                     <div class="menu-overlay"></div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- /nav -->
           <!-- /breadcrumbs -->
         <? 
@@ -319,14 +345,9 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
     }          
           ?>
 
-<? 
-    if ($APPLICATION->GetCurPage() !='/ex1/') {
-            echo '<header>
-            <h1>Заголовок страницы</h1>
-            </header>';
-}
-?>
 
-
+<h1><?
+    $APPLICATION-> ShowTitle(false);
+    ?></h1>
 
               

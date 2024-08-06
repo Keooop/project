@@ -56,6 +56,14 @@ $arUrlRewrite=array (
     'PATH' => '/ex1/news/index.php',
     'SORT' => 100,
   ),
+  33 => 
+  array (
+    'CONDITION' => '#^/ex1/rew/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/ex1/rew/index.php',
+    'SORT' => 100,
+  ),
   15 => 
   array (
     'CONDITION' => '#^/news/#',
