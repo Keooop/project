@@ -37,4 +37,8 @@ echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arResult, 1) . "</pr
 	}
 ?>
 	</div>
+
+
+	
 	<hr>
+	$GLOBALS['arrFilterTop']= ["=CREATED_BY"=>"$GLOBALS['USER']->GetID()"];

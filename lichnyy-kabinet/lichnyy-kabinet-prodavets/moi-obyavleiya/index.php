@@ -2,7 +2,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Мои Объявления");
 ?><?
-$GLOBALS['USER']->GetID();
+$arrFilterId = Array(	
+	"CREATED_BY"=>$USER->GetID());
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"ads", 
@@ -134,13 +135,13 @@ $APPLICATION->IncludeComponent(
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
-		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY1" => "",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
 		"USE_CATEGORIES" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"USE_RATING" => "N",
 		"USE_REVIEW" => "N",
@@ -153,6 +154,21 @@ $APPLICATION->IncludeComponent(
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"USE_SHARE" => "N",
 		"TITLE_NAME" => "Мои Объявления",
+		"FILTER_NAME" => "arrFilterId",
+		"FILTER_FIELD_CODE" => array(
+			0 => "ID",
+			1 => "",
+		),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "LINK",
+			1 => "GARAGES",
+			2 => "SQUARE",
+			3 => "PRIORITY",
+			4 => "BATH",
+			5 => "PRICE",
+			6 => "BEDROOM",
+			7 => "",
+		),
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",

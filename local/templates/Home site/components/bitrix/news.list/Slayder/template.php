@@ -15,10 +15,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-// echo '<pre>';
-// var_dump($arResult['ITEMS']);
-// echo '</pre>';
-// echo "<pre> Строка:[" . __LINE__ . "] \n " . print_r($arResult['ITEMS'], 1) . "</pre>";
 ?>
 <div class="slide-one-item home-slider owl-carousel">
     <?foreach ($arResult["ITEMS"] as $arItem): ?>

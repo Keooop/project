@@ -36,7 +36,7 @@ $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
-			0 => "PREVIEW_PICTURE",
+			0 => "PREVIEW_TEXT",
 			1 => "",
 		),
 		"FILTER_NAME" => "arrFilterTop",
