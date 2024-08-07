@@ -11,11 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
 ?>
-
 <div class="site-loader"></div>
-
     <div class="site-blocks-cover overlay" style="background-image: url(<?=$arResult["DETAIL_PICTURE"]["SRC"]?>);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -26,17 +23,20 @@ $this->setFrameMode(true);
           </div>
         </div>
       </div>
-    </div>
-
+    </div>	     
     <div class="site-section site-section-sm">
       <div class="container">
         <div class="row">
           <div class="col-lg-8" style="margin-top: -150px;">
             <div class="mb-5">
               <div class="slide-one-item home-slider owl-carousel">
-                  <? foreach ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arImgID):?>
-                  <div><img src="<?= $arImgID["SRC"] ?>" alt="Image" class="img-fluid"></div>
+              <?if ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]['ID']):?>
+                <div><img src="<?= $arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]['SRC'] ?>" alt="Image" class="img-fluid"></div>                   
+                    <?else:?>                 
+                  <? foreach ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arImgID):?>                                  
+                    <div><img src="<?= $arImgID["SRC"] ?>" alt="Image" class="img-fluid"></div>
                 <? endforeach;?>
+                <?endif;?>               
               </div>
             </div>
             <div class="bg-white">
@@ -47,7 +47,8 @@ $this->setFrameMode(true);
                 <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
 				          <li>
-                    <span class="property-specs">Дата Обновления</span>
+                    <span class="property-specs"><?=GetMessage("DATE_UPDATE")?></span>
+                
                     <span class="property-specs-number"><?echo $arResult['TIMESTAMP_X'];?></span>
                     
                   </li>
@@ -74,38 +75,41 @@ $this->setFrameMode(true);
                   <strong class="d-block"><?echo $arResult['DISPLAY_PROPERTIES']['GARAGES']['VALUE'];?></strong>
                 </div>
               </div>
-              <h2 class="h4 text-black">Описание</h2>
+              <h2 class="h4 text-black"><?=GetMessage("DISCRIPTION")?></h2>
                 <p><?echo $arResult["DETAIL_TEXT"];?></p>
 
                 <div class="row mt-5">
                   <div class="col-12">
                     <h2 class="h4 text-black mb-3"><?echo $arResult['PROPERTIES']['IMAGE_GALLERY']['NAME'];?></h2>
                   </div>
+                  <?if ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]['ID']):?>
+                      <a href="<?= $arImgID["SRC"] ?>" dump class="image-popup gal-item"><img src="<?= $arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"]['SRC'] ?>"    alt="Image" class="img-fluid"></a>                   
+                    <?else:?>                 
                   <? foreach ($arResult["DISPLAY_PROPERTIES"]["GALLERY"]["FILE_VALUE"] as $arImgID):?>
-                  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                  <a href="<?= $arImgID["SRC"] ?>" dump class="image-popup gal-item"><img src="<?= $arImgID["SRC"] ?>" alt="Image" class="img-fluid"></a>
-
+                                  <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                  <a href="<?= $arImgID["SRC"] ?>" dump class="image-popup gal-item"><img src="<?= $arImgID['SRC'] ?>" alt="Image" class="img-fluid"></a>
                 </div>
                 <? endforeach;?>
-               </div>
+                <?endif;?>         
+             </div>
             </div>
           </div>      
           <div class="col-lg-4 pl-md-5">
 
             <div class="bg-white widget border rounded">
 
-              <h3 class="h4 text-black widget-title mb-3">Contact Agent</h3>
+              <h3 class="h4 text-black widget-title mb-3"><?=GetMessage("CONTACT_AGENT")?></h3>
               <form action="" class="form-contact-agent">
                 <div class="form-group">
-                  <label for="name">Name</label>
+                  <label for="name"><?=GetMessage("NAME_AGENT")?></label>
                   <input type="text" id="name" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email"><?=GetMessage("EMAIL_AGENT")?></label>
                   <input type="email" id="email" class="form-control">
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone</label>
+                  <label for="phone"><?=GetMessage("PHONE")?></label>
                   <input type="text" id="phone" class="form-control">
                 </div>
                 <div class="form-group">
@@ -115,8 +119,8 @@ $this->setFrameMode(true);
             </div>
 
             <div class="bg-white widget border rounded">
-              <h3 class="h4 text-black widget-title mb-3">Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit qui explicabo, libero nam, saepe eligendi. Molestias maiores illum error rerum. Exercitationem ullam saepe, minus, reiciendis ducimus quis. Illo, quisquam, veritatis.</p>
+              <h3 class="h4 text-black widget-title mb-3"><?=GetMessage("PARAGRAPH")?></h3>
+              <p><?=GetMessage("TEXT_DISCRIPTION")?></p>
             </div>
 
           </div>
