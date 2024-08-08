@@ -25,14 +25,18 @@ if($arResult["SHOW_SMS_FIELD"] == true)
 	CJSCore::Init('phone_auth');
 }
 ?>
-<div class="bx-auth-reg">
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">    
+		<div class="col-md-12 col-lg-8 mb-5">          
+		  <form action="#" class="p-5 bg-white border">   
 
 <?if($USER->IsAuthorized()):?>
 
 <p><?echo GetMessage("MAIN_REGISTER_AUTH")?></p>
 
 <?else:?>
-	
 <?
 if (!empty($arResult["ERRORS"])):
 	foreach ($arResult["ERRORS"] as $key => $error)
@@ -107,20 +111,16 @@ new BX.PhoneAuth({
 <?
 if($arResult["BACKURL"] <> ''):
 ?>
+
 	<input type="hidden" name="backurl" value="<?=$arResult["BACKURL"]?>" />
 <?
 endif;
 ?>
-
 <table>
-	<thead>
-		<tr>
-			<td colspan="2"><b><?=GetMessage("AUTH_REGISTER")?></b></td>
-		</tr>
-	</thead>
 	<tbody>
 <?foreach ($arResult["SHOW_FIELDS"] as $FIELD):?>
 	<?if($FIELD == "AUTO_TIME_ZONE" && $arResult["TIME_ZONE_ENABLED"] == true):?>
+		
 		<tr>
 			<td><?echo GetMessage("main_profile_time_zones_auto")?><?if ($arResult["REQUIRED_FIELDS_FLAGS"][$FIELD] == "Y"):?><span class="starrequired">*</span><?endif?></td>
 			<td>
@@ -132,6 +132,8 @@ endif;
 			</td>
 		</tr>
 		<tr>
+			 </div>
+              </div>
 			<td><?echo GetMessage("main_profile_time_zones_zones")?></td>
 			<td>
 				<select name="REGISTER[TIME_ZONE]"<?if(!isset($_REQUEST["REGISTER"]["TIME_ZONE"])) echo 'disabled="disabled"'?>>
@@ -142,13 +144,22 @@ endif;
 			</td>
 		</tr>
 	<?else:?>
-		<tr>
-			<td><?=GetMessage("REGISTER_FIELD_".$FIELD)?>:<?if ($arResult["REQUIRED_FIELDS_FLAGS"][$FIELD] == "Y"):?><span class="starrequired">*</span><?endif?></td>
-			<td><?
+		         
+				<div class="row form-group">
+                <div class="col-md-12 mb-3 mb-md-0">
+                  <label class="font-weight-bold" for="fullname"><?=GetMessage("REGISTER_FIELD_".$FIELD)?></label>:
+					           
+			
+			<?if ($arResult["REQUIRED_FIELDS_FLAGS"][$FIELD] == "Y"):?> 
+					<?endif?>
+		
+				<?
 	switch ($FIELD)
 	{
 		case "PASSWORD":
-			?><input size="30" type="password" name="REGISTER[<?=$FIELD?>]" value="<?=$arResult["VALUES"][$FIELD]?>" autocomplete="off" class="bx-auth-input" />
+			?>
+			
+			<input size="30" type="PASSWORD" name="REGISTER[<?=$FIELD?>]" class="form-control" value="<?=$arResult["VALUES"][$FIELD]?>" autocomplete="off" class="bx-auth-input" />
 <?if($arResult["SECURE_AUTH"]):?>
 				<span class="bx-auth-secure" id="bx_auth_secure" title="<?echo GetMessage("AUTH_SECURE_NOTE")?>" style="display:none">
 					<div class="bx-auth-secure-icon"></div>
@@ -165,7 +176,7 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 <?
 			break;
 		case "CONFIRM_PASSWORD":
-			?><input size="30" type="password" name="REGISTER[<?=$FIELD?>]" value="<?=$arResult["VALUES"][$FIELD]?>" autocomplete="off" /><?
+			?><input size="30" type="password"class="form-control" name="REGISTER[<?=$FIELD?>]" value="<?=$arResult["VALUES"][$FIELD]?>" autocomplete="off" /><?
 			break;
 
 		case "PERSONAL_GENDER":
@@ -189,7 +200,7 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 
 		case "PERSONAL_PHOTO":
 		case "WORK_LOGO":
-			?><input size="30" type="file" name="REGISTER_FILES_<?=$FIELD?>" /><?
+			?><input size="30" type="file" class="form-control" name="REGISTER_FILES_<?=$FIELD?>" /><?
 			break;
 
 		case "PERSONAL_NOTES":
@@ -198,7 +209,7 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 			break;
 		default:
 			if ($FIELD == "PERSONAL_BIRTHDAY"):?><small><?=$arResult["DATE_FORMAT"]?></small><br /><?endif;
-			?><input size="30" type="text" name="REGISTER[<?=$FIELD?>]" value="<?=$arResult["VALUES"][$FIELD]?>" /><?
+			?> 	<input size="30" type="text" class="form-control" name="REGISTER[<?=$FIELD?>]" placeholder="<?=GetMessage("REGISTER_FIELD_".$FIELD)?>" value="<?=$arResult["VALUES"][$FIELD]?>" /><?
 				if ($FIELD == "PERSONAL_BIRTHDAY")
 					$APPLICATION->IncludeComponent(
 						'bitrix:main.calendar',
@@ -213,8 +224,11 @@ document.getElementById('bx_auth_secure').style.display = 'inline-block';
 						array("HIDE_ICONS"=>"Y")
 					);
 				?><?
-	}?></td>
-		</tr>
+	}?>
+		</div>
+		</div>
+
+		
 	<?endif?>
 <?endforeach?>
 <?// ********************* User properties ***************************************************?>
@@ -256,11 +270,11 @@ if ($arResult["USE_CAPTCHA"] == "Y")
 	<tfoot>
 		<tr>
 			<td></td>
-			<td><input type="submit" name="register_submit_button" value="<?=GetMessage("AUTH_REGISTER")?>" /></td>
+			<td><input type="submit" value="<?=GetMessage("AUTH_REGISTER")?>" class="btn btn-primary  py-2 px-4 rounded-0"></td>
 		</tr>
 	</tfoot>
 </table>
-</form>
+
 
 <p><?echo $arResult["GROUP_POLICY"]["PASSWORD_REQUIREMENTS"];?></p>
 
@@ -269,4 +283,10 @@ if ($arResult["USE_CAPTCHA"] == "Y")
 <p><span class="starrequired">*</span><?=GetMessage("AUTH_REQ")?></p>
 
 <?endif?>
-</div>
+
+</form>
+          </div>
+
+         </div>
+      </div>
+    </div>

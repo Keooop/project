@@ -25,6 +25,8 @@ Loader::includeModule("highloadblock");
 
 
 
+
+
 class AgentsList extends CBitrixComponent implements Controllerable, Errorable
 {
     protected ErrorCollection $errorCollection;
@@ -212,16 +214,9 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
                 // Указать фильтр по полю "TABLE_NAME"             !!!!!!!!!!!!!!!
        
     ]);
-
-
         if ($row = $result->fetch()) { // Получим результат запросов
-           
-            return $row;
-
+             return $row;
         }
-
-        
-
         return [];
     }
 
@@ -244,9 +239,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
          * https://tichiy.ru/wiki/rabota-s-highload-blokami-bitriks-cherez-api-d7/
          */
         $data = array(
-            "UF_NAME"=>'Name',
-            "UF_NUMBER"=>'Значение 2',
-            "UF_PHOTO"=>'Значение 3'
+            "UF_NAME"=>'Name',  
           );
           $result = $entity_data_class::add($data);
           
@@ -356,19 +349,28 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
     /**
      * Конфигурация событий для ajax
      */
+
+
+
     final public function configureActions(): array
     {
+        global $USER;
+        if ($USER->IsAuthorized() ):
+                 
         return [
-            'clickStar' => [
+            'clickStar' =>[ 
                 'prefilters' => [
                     new ActionFilter\Authentication(),
                     new ActionFilter\HttpMethod(
                         [ActionFilter\HttpMethod::METHOD_POST]
                     ),
                     new ActionFilter\Csrf(),
+                    
                 ]
             ],
         ];
+
+       endif;
     }
 
     /**
@@ -376,8 +378,13 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
      * @param $agentID - ID элемента агента
      * @return array|string[]
      */
+
+
         public function clickStarAction($agentID)
+        
         {
+
+
             $userStar= CUserOptions::GetOption("main", "user_star");
             if ($userStar) {
                 if (!is_array($userStar)){
@@ -416,7 +423,7 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
              * 5. Отправить на фронт в массиве $result в ключе 'action' значение 'success', если все прошло удачно
              */
     
-    
+     
             return $result;
         }
     }
