@@ -32,7 +32,7 @@ $navQueryStringFull  = ($arResult["NavQueryString"] != "" ? "?".$arResult["NavQu
         <?php $arResult["nStartPage"]++ ?>
     <?php } ?>
 
-            </div>
+
+    </div>
           </div>  
         </div>
-        

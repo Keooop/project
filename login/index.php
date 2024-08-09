@@ -12,6 +12,7 @@ $APPLICATION->SetPageProperty("title", "Авторизация");
 global $USER;
 if ($USER->IsAuthorized()) echo "Вы авторизованы!";
 ?> <br>
+
  <?$APPLICATION->IncludeComponent(
 	"bitrix:main.auth.form",
 	"registration",
@@ -21,8 +22,7 @@ if ($USER->IsAuthorized()) echo "Вы авторизованы!";
 		"AUTH_SUCCESS_URL" => "/",
 		"COMPONENT_TEMPLATE" => "registration"
 	)
-);?><br>
- <br>
- <br>
-<br>
- <br><?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>
+);?>
+
+
+<?require $_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php";?>

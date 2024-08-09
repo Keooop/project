@@ -56,29 +56,19 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
                         <input type="text" placeholder="Поиск">
                         <button type="submit"></button>
                     </form>
-                    <nav class="menu-block">
-                        <ul>
-                            <li class="att popup-wrap">
-                                <a id="hd_singin_but_open" href="" class="btn-toggle">Войти на сайт</a>
-                                <form action="/" class="frm-login popup-block">
-                                    <div class="frm-title">Войти на сайт</div>
-                                    <a href="" class="btn-close">Закрыть</a>
-                                    <div class="frm-row"><input type="text" placeholder="Логин"></div>
-                                    <div class="frm-row"><input type="password" placeholder="Пароль"></div>
-                                    <div class="frm-row"><a href="" class="btn-forgot">Забыли пароль</a></div>
-                                    <div class="frm-row">
-                                        <div class="frm-chk">
-                                            <input type="checkbox" id="login">
-                                            <label for="login">Запомнить меня</label>
-                                        </div>
-                                    </div>
-                                    <div class="frm-row"><input type="submit" value="Войти"></div>
-                                </form>
-                            </li>
-                            <li><a href="">Зарегистрироваться</a>
-                            </li>
-                        </ul>
-                    </nav>
+
+					<?$APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	"demo", 
+	array(
+		"FORGOT_PASSWORD_URL" => "/ex1/login/?forgot_password=yes",
+		"PROFILE_URL" => "/ex1/login/user.php",
+		"REGISTER_URL" => "/ex1/login/?register=yes",
+		"SHOW_ERRORS" => "N",
+		"COMPONENT_TEMPLATE" => "demo"
+	),
+	false
+);?><br>                  
                 </div>
             </div>
         </header>
@@ -100,71 +90,6 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
 		"USE_EXT" => "N"
 	)
 );?>
-        <!-- <nav class="nav">
-            <div class="inner-wrap">
-                <div class="menu-block popup-wrap">
-                    <a href="" class="btn-menu btn-toggle"></a>
-                    <div class="menu popup-block">
-                        <ul class="">
-                            <li class="main-page"><a href="">Главная</a>
-                            </li>
-                            <li>
-                                <a href="">Компания</a>
-                                <ul>
-                                    <li>
-                                        <a href="">Пункт 1</a>
-                                        <ul>
-                                            <li><a href="">Пункт 1</a>
-                                            </li>
-                                            <li><a href="">Пункт 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Пункт 2</a>
-                                    </li>
-                                    <li><a href="">Пункт 3</a>
-                                    </li>
-                                    <li><a href="">Пункт 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="">Новости</a>
-                            </li>
-                            <li>
-                                <a href="">Каталог</a>
-                                <ul>
-                                    <li>
-                                        <a href="">Пункт 1</a>
-                                        <ul>
-                                            <li><a href="">Пункт 1</a>
-                                            </li>
-                                            <li><a href="">Пункт 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Пункт 2</a>
-                                    </li>
-                                    <li><a href="">Пункт 3</a>
-                                    </li>
-                                    <li><a href="">Пункт 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="">Фотогалерея</a>
-                            </li>
-                            <li><a href="">Партнерам</a>
-                            </li>
-                            <li><a href="">Контакты</a>
-                            </li>
-                        </ul>
-                        <a href="" class="btn-close"></a>
-                    </div>
-                    <div class="menu-overlay"></div>
-                </div>
-            </div>
-        </nav> -->
-        <!-- /nav -->
-          <!-- /breadcrumbs -->
         <? 
     if ($APPLICATION->GetCurPage() !='/ex1/') {
             echo '
