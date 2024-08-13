@@ -30,7 +30,7 @@ $this->setFrameMode(true);
 	<?if ($arResult["DETAIL_PICTURE"]["SRC"])		{	?>
 	<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="img">
 	<?}else{?>	
-		<img src="/local/templates/exam2/img/no_photo.jpg" alt="img">
+		<img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="img">
 	<?}?>
 		</div>
 		</div>
@@ -41,14 +41,14 @@ $this->setFrameMode(true);
 		
 		
 		<?if ($arResult["DISPLAY_PROPERTIES"]["DOCS"]['FILE_VALUE']['ID'] ):?>			
-			<img class="rew-doc-ico" src="/local/templates/exam2/img/icons/pdf_ico_40.png">
+			<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png">
 			<a href="<?=$arResult["DISPLAY_PROPERTIES"]["DOCS"]['FILE_VALUE']['SRC']?>">
 				<?=$arResult["DISPLAY_PROPERTIES"]["DOCS"]['FILE_VALUE']["ORIGINAL_NAME"]?></a>
 			<?else:?>     
 		<?foreach($arResult["DISPLAY_PROPERTIES"]["DOCS"]['FILE_VALUE'] as $arItem):?>	
 			<div  class="exam-review-item-doc">
-			<img class="rew-doc-ico" src="/local/templates/exam2/img/icons/pdf_ico_40.png">
-			<a href="<?=$arItem['SRC']?>"><?=$arItem["ORIGINAL_NAME"]?></a>
+			<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH?>/img/icons/pdf_ico_40.png">
+				<a href="<?=$arItem['SRC']?>"><?=$arItem["ORIGINAL_NAME"]?></a>
 				</div>
 		<?endforeach;?>
 	<?endif;?>    

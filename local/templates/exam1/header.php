@@ -1,11 +1,12 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
+ {
     die();
 }
 
 use Bitrix\Main\Page\Asset;
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<?=LANGUAGE_ID ?>">
 
 <head>
     <title>    <?
@@ -20,7 +21,6 @@ use Bitrix\Main\Page\Asset;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<?php
-
      Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/reset.css');
      Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
      Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.css');
@@ -32,7 +32,6 @@ use Bitrix\Main\Page\Asset;
      Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/scripts.js");
      Asset::getInstance()->addString(' <link rel="icon" type="image/vnd.microsoft.icon"  href="./img/favicon.ico">');  
      Asset::getInstance()->addString('  <link rel="shortcut icon" href="./img/favicon.ico">');  
-
     $APPLICATION-> ShowHead();
     ?>
 </head>

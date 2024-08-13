@@ -34,6 +34,20 @@ $aMenuLinks = Array(
 		Array(), 
 		Array("TXT"=>"Текс для Партнерам"), 
 		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/ex1/rew/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поиск", 
+		"/ex1/search/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

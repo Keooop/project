@@ -39,7 +39,7 @@ if($arItem["PREVIEW_PICTURE"]['SRC']) {?>
 	<img src="<?=$arItem["PREVIEW_PICTURE"]['SRC']?>" alt="">
 <?}
 else{	?>
-	<img src="/local/templates/exam1/img/no_photo.jpg" alt="">
+	<img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="">
 <?}
 ?>		
 						

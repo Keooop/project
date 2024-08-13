@@ -19,7 +19,7 @@ $aMenuLinks = Array(
 		"mission.php", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6,7,8,9))" 
+		"" 
 	),
 	Array(
 		"История", 
