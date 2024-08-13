@@ -1,3 +1,9 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+    die();
+}
+
+use Bitrix\Main\Page\Asset;
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -12,15 +18,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH;?>/css/reset.css" />
-    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH;?>/css/style.css" />
-    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH;?>/css/owl.carousel.css" />
-    <script src="<?=SITE_TEMPLATE_PATH;?>/js/jquery.min.js"></script>
-    <script src="<?=SITE_TEMPLATE_PATH;?>/js/owl.carousel.min.js"></script>
-    <script src="<?=SITE_TEMPLATE_PATH;?>/js/scripts.js"></script>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="<?=SITE_TEMPLATE_PATH;?>/img/favicon.ico">
-    <link rel="shortcut icon" href="<?=SITE_TEMPLATE_PATH;?>/img/favicon.ico">
-    <?
+
+	<?php
+
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/reset.css');
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.css');
+     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/styles/fix.css");
+
+     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.min.js");
+     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
+     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/scripts.js");
+     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/scripts.js");
+     Asset::getInstance()->addString(' <link rel="icon" type="image/vnd.microsoft.icon"  href="./img/favicon.ico">');  
+     Asset::getInstance()->addString('  <link rel="shortcut icon" href="./img/favicon.ico">');  
+
     $APPLICATION-> ShowHead();
     ?>
 </head>
@@ -39,14 +51,16 @@
                 </div>
                 <div class="main-phone-block">
 
-<?
-if(date('N')>='09' || date ('H')<'18'){
-echo
-' <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
-    <div class="shedule">время работы с 9-00 до 18-00</div>';
- }
-else {
-echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
+
+				<?if (date('H')>='09'AND date('H')<'18'){
+echo'
+                    <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
+                    <div class="shedule">время работы с 9-00 до 18-00</div>';
+                }
+else   {             
+echo'
+
+                    <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
                     <div class="shedule">время работы с 9-00 до 18-00</div>';
 };
 ?>
@@ -74,25 +88,36 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
         </header>
         <!-- /header -->
         <!-- nav -->
+		<nav class="nav">
+        <div class="inner-wrap">
         <?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"horizontal_multilevel",
-	Array(
+	"bitrix:menu", 
+	"horizontal_multilevel", 
+	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "3",
-		"MENU_CACHE_GET_VARS" => array(""),
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N"
-	)
+		"USE_EXT" => "Y",
+		"COMPONENT_TEMPLATE" => "horizontal_multilevel"
+	),
+	false
 );?>
+            </div>
+            </nav>
+
+
+
+
         <? 
-    if ($APPLICATION->GetCurPage() !='/ex1/') {
-            echo '
+    if ($APPLICATION->GetCurPage() !='/ex1/') { ?>
+       
            <div class="breadcrumbs-box">
             <div class="inner-wrap">
                 <a href="">Главная</a>
@@ -100,7 +125,7 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
                 <span>Выставки и события</span>
             </div>
         </div>';
-}
+<?}
 ?>
         <!-- /breadcrumbs -->
         <!-- page -->
@@ -270,9 +295,10 @@ echo ' <a href="mailto:store@store.ru" class="phone">store@store.ru</a>
     }          
           ?>
 
-
+<?  
+                    if($APPLICATION->GetCurPage() != '/ex1/') {?>
 <h1><?
     $APPLICATION-> ShowTitle(false);
     ?></h1>
-
+<?}?>
               
