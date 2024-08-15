@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Отзывы", 
+		"/ex3/rew", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Руководство", 
+		"/ex3/company/management.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"История", 
+		"/ex3/company/history.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

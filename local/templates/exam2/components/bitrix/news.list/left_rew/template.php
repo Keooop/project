@@ -15,9 +15,7 @@ $this->setFrameMode(true);
 ?>
 
   <div class="rew-footer-carousel">
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-	<?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
+
 <?foreach($arResult["ITEMS"] as $arItem):
 	$arImg = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 49, "height" => 49));	
 	?>
@@ -35,7 +33,7 @@ $this->setFrameMode(true);
 					<?if ($arItem["PREVIEW_PICTURE"]["SRC"])		{	?>
 	<img src="<?=$arImg["src"]?>" alt="img">
 	<?}else{?>	
-		<img src="/local/templates/exam2/img/no_photo_left_block.jpg" alt="img">
+		<img src="<?=SITE_TEMPLATE_PATH ?>/img/no_photo_left_block.jpg" alt="img">
 	<?}?>
 									
 					</div>

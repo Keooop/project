@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Компания", 
+		"company/", 
+		Array(), 
+		Array("TXT"=>"текст для пункта Компания.", "CLASS_STYLE"=>"color-red"), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Продукция", 
+		"products/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Услуги", 
+		"services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Партнерам", 
+		"/ex3/partneram/", 
+		Array(), 
+		Array("TXT"=>"Текст Партнерам"), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/ex3/rew/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Поиск", 
+		"/ex3/search/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -298,6 +298,7 @@ if($APPLICATION->GetCurPage() == '/ex2/') {  ?>
         </div>
     </div>
 </div>  
+
   <?} ?> 
 
                     <?  
