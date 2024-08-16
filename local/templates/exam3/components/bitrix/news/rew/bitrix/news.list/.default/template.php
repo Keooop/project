@@ -20,7 +20,8 @@ $this->setFrameMode(true);
 
 
 
-<?foreach($arResult["ITEMS"] as $arItem):?>
+<?foreach($arResult["ITEMS"] as $arItem):
+	$Image = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 68, "height" => 50)); ?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -38,7 +39,7 @@ $this->setFrameMode(true);
 								
 						<?if ($arItem["PREVIEW_PICTURE"]["SRC"]) {?>
 
-							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="img"></a>
+							<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img src="<?=$Image["src"]?>" alt="img"></a>
 						 <?} else {?>
 							<img src="<?=SITE_TEMPLATE_PATH?>/img/no_photo.jpg" alt="img123">
 								<?}?>
