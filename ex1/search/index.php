@@ -37,14 +37,42 @@ $APPLICATION->SetTitle("Поиск");
 		"USE_SUGGEST" => "N",
 		"USE_TITLE_RANK" => "N",
 		"arrFILTER" => array(
-			0 => "iblock_rew",
+			0 => "main",
+			1 => "forum",
+			2 => "iblock_products",
+			3 => "iblock_vacancies",
+			4 => "iblock_rew",
+			5 => "iblock_Services",
+			6 => "iblock_Slayder",
+			7 => "iblock_rest_entity",
+			8 => "blog",
+			9 => "microblog",
 		),
 		"arrFILTER_iblock_products" => array(
-			0 => "14",
 		),
 		"COMPONENT_TEMPLATE" => "clear",
 		"arrFILTER_iblock_rew" => array(
 			0 => "19",
+		),
+		"arrFILTER_main" => array(
+		),
+		"arrFILTER_forum" => array(
+			0 => "all",
+		),
+		"arrFILTER_iblock_vacancies" => array(
+			0 => "all",
+		),
+		"arrFILTER_iblock_Services" => array(
+			0 => "all",
+		),
+		"arrFILTER_iblock_Slayder" => array(
+			0 => "all",
+		),
+		"arrFILTER_iblock_rest_entity" => array(
+			0 => "all",
+		),
+		"arrFILTER_blog" => array(
+			0 => "all",
 		)
 	),
 	false

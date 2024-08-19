@@ -7,6 +7,7 @@ if ($arResult ['SHOW_ERRORS'] == 'Y' && $arResult ['ERROR'])
 //dump($arResult);
 CJSCore::Init();
 ?>
+
 <?if($arResult["FORM_TYPE"] == "login") { ?>
 <nav class="menu-block">
 	<ul>
@@ -39,8 +40,8 @@ CJSCore::Init();
 				<div class="frm-row">
 					<input type="password" placeholder="<?=GetMessage("AUTH_PASSWORD")?>" name="USER_PASSWORD" maxlength="50" size="17" autocomplete="off" />			
 				</div>
-				<div class="frm-row">
-					<a href="<?=$arParams["FORGOT_PASSWORD_URL"] ?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
+								<div class="frm-row">
+					<a href="<?=$arResult['AUTH_FORGOT_PASSWORD_URL']?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
 				</div>
 				
 				<? if ($arResult["CAPTCHA_CODE"]){?>
@@ -56,7 +57,8 @@ CJSCore::Init();
 
 				<div class="frm-row">
 					<div class="frm-chk">
-						<input type="checkbox" id="login" name="USER_REMEMBER" value="Y"> <label for="login"><?=GetMessage("AUTH_REMEMBER_ME_SHORT")?></label>
+						<input type="checkbox" id="login" name="USER_REMEMBER" value="Y"> 
+						<label for="login"><?=GetMessage("AUTH_REMEMBER_ME_SHORT")?></label>
 					</div>
 				</div>
 				<div class="frm-row">
@@ -81,7 +83,7 @@ $APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "icons",
 		</tr>
 <?}?>
 			</form></li>
-		<li><a href="<?=$arParams["REGISTER_URL"] ?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
+		<li><a href="<?=$arResult["AUTH_REGISTER_URL"] ?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	</ul>
 </nav>
 
@@ -105,7 +107,8 @@ $APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "",
 	<nav class="menu-block">
                         <ul>
                             <li>
-							                                <a href="<?=$arParams["PROFILE_URL"] ?>"><?=$arResult["USER_NAME"] ?>[<?=$arResult["USER_LOGIN"]?>]</a>
+								
+							   <a href="<?=$arResult["PROFILE_URL"] ?>"><?=$arResult["USER_NAME"] ?>[<?=$arResult["USER_LOGIN"]?>]</a>
                             </li>
                             <li><a href="<?=$APPLICATION->GetCurPageParam(" logout=yes&amp; ".bitrix_sessid_get(), array(
       " login ",

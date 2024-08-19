@@ -6,18 +6,10 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  */
 
 global $APPLICATION;
-
-//delayed function must return a string
 if(empty($arResult))
 	return "";
-
 $strReturn = '';
-
-//we can't use $APPLICATION->SetAdditionalCSS() here because we are inside the buffered function GetNavChain()
-
-
 $strReturn .= ' <div class="inner-wrap">';
-
 $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
@@ -26,9 +18,7 @@ for($index = 0; $index < $itemSize; $index++)
 
 	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
 	{
-		$strReturn .= '
-	
-				
+		$strReturn .= '				
 				<a href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">
 					<span itemprop="name">'.$title.'</span>
 				</a>
@@ -37,13 +27,10 @@ for($index = 0; $index < $itemSize; $index++)
 	}
 	else
 	{
-		$strReturn .= '
-		
+		$strReturn .= '		
 					<span>'.$title.'</span>
 ';
 	}
 }
-
 $strReturn .= '<div style="clear:both"></div></div>';
-
 return $strReturn;

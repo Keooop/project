@@ -11,16 +11,15 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+$this->setFrameMode(true);?>
 
-if($arResult["FILE"] <> ''){?>
-
+<?if($arResult["FILE"] > '') {?>
 	<div class="side-block side-anonse">
-	<div class="title-block">
-		<span class="i i-title01">			
-		</span>Полезная информация!</div>
-	<div class="item">
-			<?include($arResult["FILE"]);?>
-	</div>
+		<div class="title-block">
+		<span class="i i-title01"></span><?=GetMessage('INFO')?>
+		</div>
+<div class="item">
+    <p><?include($arResult["FILE"])?></p>
+</div>
 </div>
 <?}?>

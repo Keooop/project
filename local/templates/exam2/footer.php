@@ -16,7 +16,7 @@
 		"MENU_CACHE_GET_VARS" => array(
 		),
 		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "left",
 		"USE_EXT" => "Y",
@@ -100,7 +100,7 @@
 		"PAGER_TITLE" => "Новости",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
+		"PREVIEW_TRUNCATE_LEN" => "150",
 		"PROPERTY_CODE" => array(
 			0 => "POSITION",
 			1 => "COMPANY",

@@ -48,7 +48,7 @@ if($arResult["FORM_TYPE"] == "login")
 					<input type="password" placeholder="<?=GetMessage("AUTH_PASSWORD")?>" name="USER_PASSWORD" maxlength="50" size="17" autocomplete="off" />			
 				</div>
 				<div class="frm-row">
-					<a href="<?=$arParams['FORGOT_PASSWORD_URL']?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
+					<a href="<?=$arResult['AUTH_FORGOT_PASSWORD_URL']?>" class="btn-forgot"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a>
 				</div>
 				<div class="frm-row">
 					<div class="frm-chk">
@@ -87,7 +87,7 @@ $APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "",
 
 			</form></li>
 			
-		<li><a href="<?=$arParams['REGISTER_URL']?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
+		<li><a href="<?=$arResult["AUTH_REGISTER_URL"] ?>"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	</ul>
 </nav>
 <?
@@ -100,7 +100,7 @@ $APPLICATION->IncludeComponent("bitrix:socserv.auth.form", "",
 					
 <nav class="menu-block">
                         <ul>
-                            <li><a href="<?=$arParams['PROFILE_URL'];?>"><?=$USER->GetFullName();?>[<?=$USER->GetLogin();?>]
+                            <li><a href="<?=$arResult["PROFILE_URL"] ?>"><?=$USER->GetFullName();?>[<?=$USER->GetLogin();?>]
 					</a>
                             </li>
                             <li><a href="/ex1/login/?logout=yes&<?=bitrix_sessid_get()?>"> <?=GetMessage("logout")?></a>
